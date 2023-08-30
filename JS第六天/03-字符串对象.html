@@ -1,0 +1,30 @@
+<!--
+方法名              说明                                    使用
+charAt(index)      返回指定位置的字符(index字符串的索引号)      str.charAt(0)
+charCode(index)    获取指定位置处字符的ASCII码(index索引号)    str.charCode(0)
+str[index]         获取指定位置处字符                        HTML5,IE8支持和charAt()等效
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据位置返回字符</title>
+    <script>
+        var str = 'andy';
+        console.log(str.charAt(3));
+
+        for(var i = 0; i < str.length; i++){
+            console.log(str.charAt(i));
+        }
+        //str.charCodeAt(index)判断用户按下了哪个键位
+        console.log(str.charCodeAt(0));
+        //str[index] H5新增的
+        console.log(str[0]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

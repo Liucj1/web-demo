@@ -1,0 +1,36 @@
+body{
+    font:16px/28px 'Microsoft YaHei';
+}
+h1{
+    text-align:center;
+    font-weight: 400;
+}
+.div1{
+    text-align:center;
+    color: #888888;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+.search{
+    color: #666;
+    height: 20px;
+    width: 180px;
+}
+.btn{
+    font-weight: 800;
+    width: 50px;
+    height: 22px;
+}
+p{
+    text-indent:2em;
+}
+.p1{
+    text-align: center;
+}
+.div2{
+    text-align:left;
+    color: #888888;
+    font-size: 14px;
+}

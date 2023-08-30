@@ -1,0 +1,69 @@
+<!--
+    Date()日期对象是一个构造函数，必须使用new来调用创建我们的日期对象
+    日期格式化
+    方法名              说明            代码
+    getFullYear()      获取当年        dObj.getFullYear()
+    getMonth()         获取当月(0-11)  dObj.getMonth()
+    getDate()          获取当天日期     dObj.getDate()
+    getDay()           获取星期几       dObj.getDay()
+    getHours()         获取当前小时     dObj.getHours()
+    getMinutes()       获取当前几分钟   dObj.getMinutes()
+    getSeconds()       获取当前秒钟     dObj.getSeconds()
+
+    Date对象和Math对象不一样，它是一个构造函数，所以我们需要实例化后才能使用
+    获得Date总的毫秒数，不是当前时间的毫秒数，而是距离1970年1月1号过了多少毫秒数
+    通过valueOf() getTime()
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date日期对象</title>
+    <script>
+        var arr = new Array();//创建一个数组对象
+        var obj = new Object();//创建一个对象实例
+        var date = new Date();
+        console.log(date);
+
+        //参数常用的写法：
+        //数字型：2019,10,01
+        //字符串型：'2019-10-01 14:00:00'
+        var date1 = new Date('2023-01-01 14:00:00');
+        console.log(date1);
+
+        //日期格式化
+        var date2 = new Date();
+        console.log(date2.getFullYear());
+        console.log(date2.getMonth() + 1);
+        console.log(date2.getDay()); //周一返回的是1，周日返回的是0
+
+        function getTimer(){
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s ;
+        }
+        console.log(getTimer());
+
+
+        var date3 = new Date();
+        console.log(date3.valueOf());
+        console.log(date3.getTime());
+        //简单的写法
+        var date4 = +new Date();//返回的就是总毫秒数
+        console.log(date4);
+        //H5新增的方法
+        console.log(Date.now());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- 
+表单标签目的是为了收集用户信息。在我们网页中，我们也需要跟用户进行交互，收集用户资料，这时候就需要表单
+表单的组成：
+在html中，一个完整的表单通常是由表单域、表单控件(也称为表单元素)和提示信息3个部分构成
+
+表单域：
+表单域是一个包含表单元素的区域
+在html标签中，<form>标签用于定义表单域，以实现用户信息的收集和传递
+<form>会把它范围内的表单元素信息提交给服务器
+
+<form action="url地址" method="提交方式" name="表单域名称">
+    各种表单元素控件
+</form>
+常用属性：
+属性     属性值       作用
+action  url地址      用于指定接收并处理表单数据的服务器程序的url地址(需要服务器编程，上传到url地址)
+method  get/post    用于设置表单数据的提交方式，其取值为get或post
+name     名称        用于指定表单的名称，以区分同一个页面中的多个表单域
+1、在我们写表单元素之前，应该又个表单域把他们进行包含
+2、表单域就是form标签
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签-表单域</title>
+</head>
+<body>
+    <form action="" method="post" name="name1">
+
+    </form>
+</body>
+</html>

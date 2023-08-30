@@ -1,0 +1,39 @@
+<!--
+函数：就是封装了一段可被重复调用执行的代码块。通过此代码块可以实现大量代码的重复使用
+函数的封装：是把一个或者多个功能通过函数的方式封装起来，对外只提供一个简单的函数接口(类似于电脑配件组装到机箱里)
+函数在使用时分为两大步：声明函数和调用函数
+1、声明函数：
+    function 函数名(){
+        函数体;
+    }
+*function声明函数的关键字，全部小写
+*函数是做某件事情，函数名一般是动词
+*函数不调用，自己不执行
+
+2、调用函数：
+    函数名();
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的概念</title>
+    <script>
+        function getSum(num1,num2) {
+            var sum = 0;
+            for(var i = num1; i <= num2; i++){
+                sum += i;
+            }
+            console.log(sum);
+        }
+        getSum(1,100);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

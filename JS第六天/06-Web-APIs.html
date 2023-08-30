@@ -1,0 +1,94 @@
+<!--
+js的组成：ECMAScript,DOM,BOM
+API：应用程序编程接口，是一些预先定义的函数。不需要访问源码或理解代码细节，能直接使用
+Web API是浏览器提供的一套操作浏览器功能和页面元素的API
+MDN详细API：https://developer.mozilla.org/zh-CN/docs/Web/API
+
+DOM：文档对象模型，是W3C组织推荐的处理可扩展标记语言的标准编程接口。W3C定义了一系列的DOM接口，通过这些接口可以改变网页的内容、结构和样式
+DOM树：
+    文档：一个页面就是一个文档，DOM中使用document
+    元素：页面中所有的标签都是元素，DOM中使用element
+    节点：网页中所有的内容都是节点(标签、属性、文本、注释等)，DOM使用node来表示
+    DOM把以上内容都看做是对象
+
+如何获取页面元素：
+*根据ID获取：getElementById()方法可以获取带有ID的元素对象
+*根据标签名获取：getElementByTagNmae()方法可以返回带有制定标签名的对象的集合
+*通过HTML5新增的方法获取
+*特殊元素获取
+
+根据标签名获取：
+*使用getElementsByTagName()方法可以返回带有指定标签名的对象的集合
+*因为得到的是一个对象的集合，所以我们想要操作里面的元素就需要遍历
+*得到元素对象是动态的
+*如果页面中没有这个元素，返回的是空的伪数组形式
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APIs和JS基础关联性</title>
+    <script type="text/javascript">!function(t,e,n,a,i){var c="__ty_web_inject_guard",o="__ty_web_tpl_guard",r="https:",d="http:",s="//";function _(){var t=[].slice.call(arguments);_.q.push(t)}function g(t){var e,a="tingyun_agent",i=n.getElementsByTagName("head")[0];!n.getElementById(a)&&i&&((e=n.createElement("script")).id=a,e.async=!0,e.crossorigin="anonymous",e.src=t,i.appendChild(e))}try{if(!e[o]){_.q=[],e[a]=_,e.TINGYUN_COOKIE_VALUE=n.cookie;var u="TINGYUN_DATA=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";n.cookie=u,n.cookie="".concat(u,"path=/"),e[o]=!0}if(!e[c])if(!/(MSIE [0-6].\\d+)/.test(e.navigator.userAgent)){var h={};t(h);var f,p,y=h.config||{};try{f=e.location.protocol}catch(E){}var l=y.addr;if(l?p=f===r?l.https:f===d?l.http:l.other:0!==(p=i||"").indexOf(r+s)&&0!==p.indexOf(d+s)&&(0===p.indexOf(s)&&(p=p.substring(2)),p&&(f!==r&&f!==d&&(f=r),p=f+s+p)),p)n.getElementsByTagName("head")[0]?(g(p),e[c]=!0):e.addEventListener&&(e.addEventListener("DOMContentLoaded",(function(){try{g(p)}catch(E){}})),e[c]=!0)}}catch(E){}}(function(ty_tpl){},window,document,"TingyunWeb","wkbrs2.tingyun.com/js/tingyun-origin-6413.js");</script>
+<script type="text/javascript">
+  window.TingyunWeb("init", 
+   {
+	"domain":"wkbrs2.tingyun.com",
+	"token":"30af8e49aa51473083d7a5eb79e301e9",
+	"key":"HfrZUSBT4Do",
+	"id":"kavU-f7IPas",
+	"plugins":[
+		"TingyunPluginRecord"
+	],
+	"replay":{
+		"enabled":true,
+		"sampleRate":1.0
+	}
+}  )
+</script>
+    
+</head>
+
+<body>
+    <div id = "time">2023-07-13</div>
+    <script>
+        var timer = document.getElementById('time');//参数id是大小写敏感的字符串
+        console.log(timer);
+        console.log(typeof timer);
+        console.dir(timer);//打印我们返回的元素对象，更好的查看里面的属性和方法
+    </script>
+    <ul>
+        <li>你好，你好，我真的不太好</li>
+        <li>你好，你好，我真的不太好</li>
+        <li>你好，你好，我真的不太好</li>
+        <li>你好，你好，我真的不太好</li>
+        <li>你好，你好，我真的不太好</li>
+    </ul>
+    <ol>
+        <li>自己自己</li>
+        <li>自己自己</li>
+        <li>自己自己</li>
+        <li>自己自己</li>
+        <li>自己自己</li>
+    </ol>
+    <script>
+        //返回的是，获取过来元素对象的集合，以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        console.log(lis[0]);
+        for(var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+        var hi = document.getElementsByTagName('div');
+        console.log(hi);
+
+        //注意：父元素必须是单个对象(必须指明是哪一个元素对象)。获取的时候不包括父元素自己
+        var ols = document.getElementsByTagName('ol');
+        console.log(ols[0].getElementsByTagName('li'));
+    </script>
+</body>
+
+</html>

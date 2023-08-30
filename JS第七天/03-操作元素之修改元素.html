@@ -1,0 +1,58 @@
+<!--
+
+-->
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素</title>
+    <style>
+        .img {
+            width: 300px;
+        }
+    </style>
+</head>
+    刘德华、张学友的案例：</br>
+    <!-- <button id = "ldh">刘德华</button>
+    <button id = "zxy">张学友</button></br>
+    <img class = "img" src="../images/1.webp" alt="" title="刘德华"></body></br>
+
+    <script>
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var img = document.querySelector('img');
+
+        zxy.onclick = function(){
+            img.src = '../images/2.webp';
+            img.title = '张学友';
+        }
+        ldh.onclick = function(){
+            img.src = '../images/1.webp';
+            img.title = '刘德华';
+        }
+    </script> -->
+    根据时间改变图片和文字：</br>
+    <img class="img"  src="../images/3.webp" alt="">
+    <div>上午好</div>
+    <script>
+        var img1 = document.querySelector('img');
+        var div = document.querySelector('div');
+
+        var date = new Date();
+        var h = date.getHours();
+
+        if(h < 12){
+            img1.src = '../images/3.webp';
+            div.innerHTML = '亲，上午好呦～';
+        }else if(h < 17){
+            img1.src = '../images/22.webp';
+            div.innerHTML = '亲，下午好呦～';
+        }else{
+            img1.src = '../images/1.webp';
+            div.innerHTML = '亲，晚上好呦～';
+        }
+    </script>
+</body>
+</html>

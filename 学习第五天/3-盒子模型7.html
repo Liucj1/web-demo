@@ -1,0 +1,47 @@
+<!--
+7、外边距
+margin属性用于设置外边距，即控制盒子和盒子之前的距离
+属性             作用
+margin-left     左外边距
+margin-right    右外边距
+margin-top      上外边距
+margin-bottom   下外边距
+
+外边距典型应用
+外边距可以让块级盒子水平居中，但是必须满足两个条件：
+1、盒子必须指定了宽度(width)
+2、盒子左右的外边距都设置为auto
+.header{
+    width:960px;
+    margin:0 auto;
+}
+常见的写法，以下三种都可以：
+1、margin-left:auto; margin-right:0;
+2、margin:auto;
+3、margin:0 auto;
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        .one{
+            margin-bottom: 5px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">1</div>
+    <div>2</div>
+</body>
+</html>

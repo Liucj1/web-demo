@@ -1,0 +1,35 @@
+<!--
+遍历对象属性
+    for (变量 in 对象)语句用于对数组或者对象的属性进行循环操作
+    我们使用for in里面的变量，通常写k或者key
+
+对象属于复杂数据类型object
+对象本质就是一组无序的相关属性和方法的集合
+构造函数泛指某一大类，比如苹果：不管是红色还是绿色，都叫苹果
+对象实例特指一个事物，比如这个苹果，这个红色的苹果
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+    <script>
+        var obj = {
+            name : 'zhangsan',
+            age : 18,
+            sex : '男'
+            
+        }
+        for(var k in obj){
+            console.log(k); //k变量输出，得到的是属性名
+            console.log(obj[k]); //obj[k]，得到的是属性值
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

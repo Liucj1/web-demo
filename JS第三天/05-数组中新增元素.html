@@ -1,0 +1,62 @@
+<!--
+可以通过修改length长度以及索引号增加数组元素
+    *可以通过修改length长度来实现数组扩容的目的
+    *length属性是可读写的
+    *可以通过修改数组索引的方式追加数组元素
+    *不能直接给数组名赋值，否则会覆盖掉以前的数据
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组中新增元素</title>
+    <script>
+        //新增数组元素，修改length长度
+        var arr = ['red','green','blue'];
+        console.log(arr.length);
+
+        arr.length = 5;//把数组的长度修改为了5，里面应该有5个元素
+        //新增数组元素，修改索引号，追加数组元素
+        arr[3] = 'white';
+        arr[4] = 'black';
+        console.log(arr);
+        arr[0] = 'yellow';//这是替换原来的数组元素
+        console.log(arr);
+        arr = '有点意思';
+        console.log(arr);//不要直接给数组赋值。否则里面的数组元素都没有了
+
+        var arr1 = [];
+        for(var i = 0; i < 10; i++){
+            arr1[i] = i + 1;
+        }
+        console.log(arr1);
+
+        // var arr2 = [2,0,6,1,77,0,52,0,25,7];
+        // var arr3 = [];
+        // var j = 0;
+        // for(var i = 0 ; i < arr2.length; i++){
+        //     if(arr2[i] > 10){
+        //         //新数组索引号应该从0开始，依次递增
+        //         arr3[j] = arr2[i];
+        //         j++;
+        //     }
+        // }
+        // console.log(arr3);
+        var arr2 = [2,0,6,1,77,0,52,0,25,7];
+        var arr3 = [];
+        for(var i = 0 ; i < arr2.length; i++){
+            if(arr2[i] > 10){
+                //新数组索引号应该从0开始，依次递增
+                arr3[arr3.length] = arr2[i];
+            }
+        }
+        console.log(arr3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

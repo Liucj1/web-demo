@@ -1,0 +1,51 @@
+<!--
+方法名                          说明
+concat(str1,str2,str3...)      concat()方法用于连接两个或多个字符串，拼接字符串，等效于+号
+substr(start,length)           从start位置开始(索引号),length取的个数
+slice(start,end)               从start位置开始，截取到end位置，end取不到(他们俩都是索引号)
+substring(start,end)           从start位置开始，截取到end位置，end去不到。基本和slice相同，到那时不接受负值
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计次数最多的字符</title>
+    <script>
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for(var i = 0; i < str.length; i++){
+            var chars = str.charAt(i);  //chars是字符串的每一个字符
+            if(o[chars]){   //得到的是属性值
+                o[chars]++;
+            }else{
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        var ch = '';
+        for( var k in o){
+            if(o[k] > max){
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log(ch);
+
+        var str1 = '我是你的你是我的谁';
+        console.log(str1.substr(2,2));
+
+        var str2 = 'sjsjsjsj';
+        console.log(str2.replace('sjsjsj','abababa'));
+
+        var str3 = '红的，白的，懒得';
+        console.log(str3.split('，'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

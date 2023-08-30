@@ -1,0 +1,36 @@
+<!--
+字符串所有的方法，都不会修改字符串本身(字符串是不可变的)，操作完成会返回一个新的字符串
+方法名                              说明
+indexOf('要查找的字符'，开始的位置)     返回指定内容在原字符串中的位置，如果找不到就返回-1，开始的位置是index索引号
+lastIndexOf()                      从后往前找，只找第一个匹配的
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据字符返回位置</title>
+    <script>
+        //字符串对象，根据字符返回位置。str.indecOf('我要查找的字符',)
+        var str = '改革春风吹满地，春风吹满地';
+        console.log(str.indexOf('春'));
+        console.log(str.indexOf('春',3));
+        
+        var str1 = "abcoefoxyozzoppo";
+        var index = str1.indexOf('o');
+        var num = 0;
+        while(index != -1){
+            console.log(index);
+            num++;
+            index = str1.indexOf('o',index + 1);
+        }
+        console.log(num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!--
+1、document.getElementsByClassName('box');根据类名返回元素对象集合
+2、document.querySelector('.box');根据指定选择器返回第一个元素对象
+3、document.querySelectorAll('');根据指定选择器返回
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素方式</title>
+
+</head>
+<body>
+    <div class = "box">盒子1</div>
+    <div class = "box">盒子2</div>
+    <div id = "nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        var boxs = document.getElementsByClassName('box');//根据类名返回元素对象集合
+        console.log(boxs);
+
+        var boxss = document.querySelector('.box');//根据指定选择器返回第一个元素对象
+        console.log(boxss);
+
+        var navs = document.querySelector('#nav');
+        console.log(navs);
+
+        var lis = document.querySelectorAll('.box');
+        console.log(lis);
+    </script>
+</body>
+</html>

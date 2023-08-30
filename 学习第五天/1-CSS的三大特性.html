@@ -1,0 +1,105 @@
+<!--
+CSS有三个非常重要的三个特性：层叠性、继承性、优先级。
+1、层叠性
+    相同选择器给设置相同的样式，此时一个样式就会覆盖(层叠)另一个冲突的样式。层叠性主要解决样式冲突的问题
+    *样式冲突，遵循的原则就是就近原则。哪个样式离结构近，就执行哪个样式
+    *样式不冲突，不会层叠
+
+2、继承性
+    现实中的继承：我们继承了父亲的姓
+    CSS中的继承：子标签会继承父标签的某些样式。如：文本颜色、字号。简单的理解就是：子承父业
+    继承于 英文：Inherited from
+    *恰当的使用继承可以简化代码，降低CSS样式的复杂性
+    *子元素可以继承父元素的样式(text-、font-、line-这些元素开头的可以继承，以及color属性)
+    2.1行高的继承
+        body{
+            font:12px/1.5 'Microsoft YaHei';
+        }
+        *行高可以跟单位也可以不跟单位
+        *此时子元素的行高是：当前子元素的文字大小1.5(这个1.5就是当前元素文字大小font-size的1.5倍)
+        *body行高1.5。这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高
+
+3、优先级
+    当同一个元素指定多个选择器，就会有优先级的产生
+    *选择器相同，则执行层叠性
+    *选择器不同，则根据选择器权重执行
+    选择器               选择器权重
+    继承或者*             0，0，0，0
+    元素选择器            0，0，0，1
+    类选择器、伪类选择器    0，0，1，0
+    ID选择器             0，1，0，0
+    行内样式style=""     1，0，0，0
+    !important重要的     无穷大
+        *权重是有4组数字组成，但是不会有进位
+        *可以理解为类选择器永远大于元素选择器，id选择器永远大于类选择器，以此类推
+        *等级判断从左向右，如果某一位数值相同，则判断下一位数值
+        *继承的权重是0。如果该元素没有直接选中，不管父元素权重多高，子元素得到的权重都是0
+    *权重叠加：如果是复合选择器，则会有权重叠加，需要计算权重
+    *权重虽然会叠加，但是永远不会有进位的问题
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的三大特性</title>
+    <style>
+        body{
+            font: 12px/1.5 'Microsoft YaHei';
+            padding: 0px;
+            margin: 0px;
+        }
+        div{
+            color: red;
+            font-size: 15px;
+        }
+        div{
+            color: blue;
+        }
+        p{
+            font-size: 20px;
+            color: pink;
+        }
+        .test{
+            color: red!important;
+        }
+        #demo{
+            color: brown;
+        }
+        li{
+            color: blue;
+        }
+        ul li{
+            color: yellow;
+        }
+        .nav li{
+            color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div>长江后浪推前浪，前浪死在沙滩上</div>
+    <div>
+        <p>龙生龙，凤生凤。老鼠的孩子会打洞</p>
+    </div>
+    <p>粉红色的回忆</p>
+    <div class="test" id="demo" style="color:blueviolet">你笑起来真好看</div>
+    <div  id="demo">
+         <p>继承的权重是0</p>
+    </div>
+    <!--
+        复合选择器权重叠加的问题
+        ul li权重是：0,0,0,1 + 0,0,0,1 = 0,0,0,2
+        li权重是：0,0,0,1
+        .nav li权重是：0,0,1,0 + 0,0,0,1 = 0,0,1,1
+    -->
+    <ul class="nav">
+        <li>叫花鸡</li>
+        <li>烤鸡</li>
+        <li>白斩鸡</li>
+    </ul>
+</body>
+</html>

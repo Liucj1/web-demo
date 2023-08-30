@@ -1,0 +1,44 @@
+<!--
+一、数组的索引
+索引(下标)：用来访问数组元素的序号(数组下标从0开始)
+var arr = ['小黄','小白','小黑',1];
+  索引号：    0      1     2    3
+数组可以通过索引来访问、设置、修改对应的数组元素。我们可以通过"数组名[索引]"的形式来获取数组中的元素
+这里的访问就是获取得到的意思
+
+二、遍历数组
+  可以通过“数组名[索引号]的方式一项项的取出来”
+  var arr = ['red','green','blue'];
+  console.log(arr[0]);
+  console.log(arr[1]);
+  console.log(arr[2]);
+  Q：怎么把数组里面的元素全部取出来？
+  规律：从代码中可以发现，从数组中取出每一个元素时，代码时重复的，有所不一样的是索引值在递增。答案就是循环！
+  遍历：就是把数组中的每个元素从头到尾都访问一次(类似于每天早上学生点名一样)
+  1、因为数组索引号从0开始，所以i必须从0开始
+  2、输出的时候arr[i]，i计数器当索引号来用
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组的索引</title>
+    <script>
+        var arr = ['小黄','小黑','小白',1,2,true];
+        console.log(arr[2]);
+        console.log(arr[3]);
+
+        var arr1 = ['red','green','blue'];
+        for(var i = 0; i < 3; i++){
+          console.log(arr1[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

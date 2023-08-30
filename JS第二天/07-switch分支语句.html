@@ -1,0 +1,55 @@
+<!--
+1、switch语句也是多分支语句，也可以实现多选一
+2、语法结构switch转换、开关；case小例子或者选项的意思
+    switch(表达式){
+        case value1:
+            执行语句1;
+            break;
+        case value2:
+            执行语句2;
+            breake;
+        ...
+        default:
+            执行最后的语句;
+    }
+3、switch注意事项
+    *我们开发里面，表达式我们经常写成变量
+    *我们num的值和case里面的值相匹配的时候是全等。必须是值和数据类型一致才可以num===1
+    *break如果当前的case里面没有break，则不会退出switch，会继续执行下一个case
+
+4、switch语句和if-else if语句的区别
+    *一般情况下，他们两个语句可以相互替换
+    *switch...case语句通常处理case为比较确定值的情况；而if-else if语句更加灵活，常用语范围判断(大于、等于某个范围)
+    *switch语句进行条件判断后直接执行到程序的条件语句，效率更高；而if-else if语句有几种条件，就得判断多少次
+    *当分支比较少时，if else语句的执行效率比switch语句高
+    *当分支比较多时，switch语句的执行效率比较高，而且结构更清晰
+    *
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch分支语句</title>
+    <script>
+        var fruit = prompt('请输入水果：');
+        switch(fruit){
+            case '苹果':
+                alert('3.5/一斤');
+                break;
+            case '榴莲':
+                alert('35/一斤');
+                break;
+            default:
+                alert('没有此水果');
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

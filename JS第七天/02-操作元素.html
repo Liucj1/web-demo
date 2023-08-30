@@ -1,0 +1,83 @@
+<!--
+JS的DOM操作可以改变网页内容、结构和样式。我们可以利用DOM操作元素来改变元素里面的内容、属性等。以下都是属性
+
+element.innerText：从起始位置到终止位置的内容，但它去除html标签，同时空格和换行也会去掉
+
+element.innerHTML：起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>操作元素</title>
+    <style>
+        div , p{
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <p>12345</p>
+    <script>
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+
+        btn.onclick = function(){
+            div.innerText = getDate();
+        }
+
+        function getDate(){
+            var date = new Date();
+            // console.log(date.getFullYear());
+            // console.log(date.getMonth() + 1);
+            // console.log(date.getDate());
+            // console.log(date.getDay());
+        
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var day = date.getDay();
+            return '今天是' + year + '年' + month + '月' + dates + '日' + arr[day];
+        }
+
+        var p1 = document.querySelector('p');
+        p1.innerText = getDate();
+    </script>
+
+    <!-- <div></div>
+    <script>
+        // var div = document.querySelector('div');
+        // div.innerText = '<strong>今天是：</strong>2019';
+        
+        var div = document.querySelector('div');
+        div.innerHTML = '<strong>今天是：</strong>2019';
+
+    </script> -->
+    
+    <!-- <script>
+        格式化日期年月日
+        var date = new Date();
+        console.log(date.getFullYear());
+        console.log(date.getMonth() + 1);
+        console.log(date.getDate());
+        console.log(date.getDay());
+        
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var day = date.getDay();
+        console.log('今天是' + year + '年' + month + '月');
+    </script> -->
+</body>
+</html>

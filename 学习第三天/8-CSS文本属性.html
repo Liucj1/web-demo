@@ -1,0 +1,107 @@
+<!--
+CSS Text(文本)属性可定义文本的外观，比如文本的颜色、对齐文本、装饰文本、文本缩进、行间距等
+1、文本颜色
+    color属性用于定义文本的颜色
+    div{
+        color:red;
+    }
+    表示            属性值
+    预定义的颜色值    red,green,blue,还有我们的御用色pink
+    十六进制         #FF0000,#FF6600,#29D794
+    RGB代码         rgb(255,0,0)或rgb(100%,0%,0%)
+    开发最常用十六进制
+
+2、对齐文本
+    text-align属性用于设置元素内文本内容的水平对齐方式
+    div{
+        text-align:center;
+    }
+    属性值      解释
+    left       左对齐(默认值)
+    right      右对齐
+    center     居中对齐
+    本质是让h1盒子里面的文字水平居中对齐
+
+3、装饰文本
+    text-decoration属性规定添加到文本的修饰，可以给文本添加下划线、删除线、上划线等
+    div{
+        text-decoration:underline;
+    }
+    属性值          描述
+    none           默认。没有装饰线(最常用)
+    underline      下划线。链接a自带下划线(常用) 
+    overline       上划线。(几乎不用)
+    line-through   删除线。(不常用)
+
+4、文本缩进
+    text-indent属性用来指定文本的第一行的缩进，通常是将段落的首行缩进。
+    div{
+        text-indent:10px;
+    }
+    通过设置该属性，所有元素的第一行都可以缩进一个给定的长度，设置该长度可以是负值
+    p{
+        text-indent:2em;
+    }
+    em是一个相对单位，就是当前元素(font-size)1个文字的大小。如果当前元素没有设置大小，则会按照父元素的1个文字大小
+
+5、行间距
+    line-height属性用于设置行间的距离(行高)。可以控制文字行与行之间的距离
+    p{
+        line-height:26px;
+    }
+            上间距
+    中国人   文本高度   这三个组成了行间距
+            下间距
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS文本外观属性颜色</title>
+    <style>
+        .div1{
+            /* color: red; */
+            color: #000dff;
+        }
+        h1{
+            text-align: center;
+        }
+        .p1{
+            text-decoration: underline;
+        }
+        .p2{
+            text-decoration: overline;
+        }
+        .p3{
+            text-decoration: line-through;
+        }
+        .a1{
+            text-decoration: none;
+        }
+        .p4{
+            text-indent: 20px;
+        }
+        .p5{
+            font-size: 20px;
+            text-indent: 2em;
+        }
+        .div2{
+            line-height: 26px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">听说喜欢pink的男生，都是猛男！</div>
+    <h1>居中对齐的标题</h1>
+    <p class="p1">粉红色的回忆</p>
+    <p class="p2">粉红色的回忆</p>
+    <p class="p3">粉红色的回忆</p>
+    <a href="wwww.baidu.com" class="a1">百度</a>
+    <p class="p4">打开手机看见空间发空间打开手机放口袋设计分开了的就是风口浪尖的说法都开始发看的是就看发了就是的了发就的是了看发就看了的是就发了看就是的看了发动车呢</p>
+    <p class="p5">打开手机看见空间发空间打开手机放口袋设计分开了的就是风口浪尖的说法都开始发看的是就看发了就是的了发就的是了看发就看了的是就发了看就是的看了发动车呢</p>
+    <div class="div2">中国人</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!--
+概念：比较运算符(关系运算符)是两个数据进行比较时所使用的运算符。比较运算后，会返回一个布尔值(true/false)作为比较运算的结果
+运算符名称      说明                    案例        结果
+<             小于号                   1<2        true
+>             大于号                   1>2        true
+>=         大于等于号(大于或等于)        2>=2       true
+<=         小于等于号(小于或等于)        3<=2       false
+==          判等号(会转型)             37==37      true
+!=            不等号                  37!=37      false
+===或!==    全等 要求值和数据类型都一致   37===‘37’   false
+
+符号        作用        用法
+=          赋值        把右边给左边
+==         判断        判断两边值是否相等(注意此时有隐式转换)
+===        全等        判断两边的值和数据类型是否完全相同
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+    <script>
+        console.log(3 >= 5);
+        console.log(2 <= 4);
+        console.log('刘城郡' == '吴彦祖');
+        console.log(19 == '19');//默认转换数据类型。会把字符串型的数据转换为数字型的
+        console.log(19 === '19');//全等两侧的值还有数据类型完全一致才可以
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

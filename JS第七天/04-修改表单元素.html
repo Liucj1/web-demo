@@ -1,0 +1,32 @@
+<!--
+Dom可以操作如下表单元素的属性：
+type、value、checked、selected、disabled
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改表单元素</title>
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" value="输入内容">
+    <script>
+        var btn = document.querySelector('button');
+        var input1 = document.querySelector('input');
+        btn.onclick = function(){
+            //input1.innerHTML = '点击了';  这个事普通盒子，比如div标签里面的内容
+            input1.value = '点击了';
+
+            //不能再点击
+            // btn.disabled = true;
+            this.disabled = true;
+            //this指向的是事件函数的调用者。onclick这个函数谁调用了？btn调用了，this就指向btn
+        }
+    </script>
+
+    
+</body>
+</html>

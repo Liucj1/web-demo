@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        img{
+            vertical-align: middle;
+        }
+    </style>
+    <script src="wkbrs2.tingyun.com/js/tingyun-origin-3379.js"></script>
+<script src = "./test.js"></script>
+</head>
+<body>
+    <h4>青春不常在，抓紧谈恋爱</h4>
+    <script>
+        function onclickFun(){
+            var event = window.TINGYUN.newAction({
+                key: 'onclick点击事件'
+            })
+            alert("onclick事件");
+            event.end();
+        }
+    </script>
+    <button onclick = "onclickFun()">按钮</button>
+    <script>
+    var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://192.168.5.114:8089/shop/list?type=wjn_type222&type1=11111www&type2=22222wwww')
+        xhr.setRequestHeader('Content-Type', 'application/json')
+        xhr.send(JSON.stringify({
+            delay: 3000
+        }));
+        xhr.onload = function () {
+            console.log(xhr.responseText)
+        }
+        </script>
+    
+    
+    <table width="500" >
+        <!--第一行-->
+        <tr>
+            <td>性别：</td>
+            <td>
+                <label for="man">男<img src="../images/3.webp" height="20"></label>
+                <input type="radio" name="sex" value="男" id="man"/>&nbsp;
+                <label for="woman">女<img src="../images/2.webp" height="20"></label>
+                <input type="radio" name="sex" value="女" id="woman"/>&nbsp;
+            </td>
+        </tr>
+        <!--第二行-->
+        <tr>
+            <td>生日：</td>
+            <td>
+                <select>
+                    <option selected="selected">--请选择年--</option>
+                    <option>2000</option>
+                    <option>1999</option>
+                    <option>1998</option>
+                    <option>1997</option>
+                    <option>1996</option>
+                    <option>1995</option>
+                </select>
+                <select>
+                    <option selected="selected">--请选择月--</option>
+                    <option>12</option>
+                    <option>11</option>
+                    <option>10</option>
+                    <option>9</option>
+                    <option>8</option>
+                    <option>7</option>
+                </select>
+                <select>
+                    <option selected="selected">--请选择日--</option>
+                    <option>30</option>
+                    <option>29</option>
+                    <option>28</option>
+                    <option>27</option>
+                    <option>26</option>
+                    <option>25</option>
+                </select>
+            </td>
+        </tr>
+        <!--第三行-->
+        <tr>
+            <td><label for="area">所在地区：</label></td>
+            <td><input type="text" value="北京海淀区羊坊街道" id="area" maxlength="20"/></td>
+        </tr>
+        <!--第四行-->
+        <tr>
+            <td>婚姻状况：</td>
+            <td>
+                <label for="wh">未婚</label><input type="radio" name="relation" id="wh"/>&nbsp;
+                <label for="yh">已婚</label><input type="radio" name="relation" id="yh"/>&nbsp;
+                <label for="nv">男女朋友</label><input type="radio" name="relation" id="nv"/>
+            </td>
+        </tr>
+        <!--第五行-->
+        <tr>
+            <td>学历：</td>
+            <td><input type="text" value="本科" maxlength="5"/></td>
+        </tr>
+        <!--第六行-->
+        <tr>
+            <td>喜欢的类型：</td>
+            <td>
+                妩媚的<input type="checkbox" name="like" value="妩媚的"/>&nbsp;
+                可爱的<input type="checkbox" name="like" value="可爱的"/>&nbsp;
+                小鲜肉<input type="checkbox" name="like" value="小鲜肉"/>&nbsp;
+                老腊肉<input type="checkbox" name="like" value="老腊肉"/>&nbsp;
+                都喜欢<input type="checkbox" name="like" value="都喜欢"/>
+            </td>
+        </tr>
+        <!--第七行-->
+        <tr>
+            <td>自我介绍：</td>
+            <td>
+                <textarea cols="30" rows="3">自我介绍</textarea>
+            </td>
+        </tr>
+        <!--第八行-->
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="免费注册"></td>
+        </tr>
+        <!--第九行-->
+        <tr>
+            <td></td>
+            <td>
+                <input type="checkbox" value="我同意"/>我同意注册条款和会员加入标准
+            </td>
+        </tr>
+        <!--第十行-->
+        <tr>
+            <td></td>
+            <td>
+                <a href="#">我是会员，立即登录</a>
+            </td>
+        </tr>
+        <!--第十一行-->
+        <tr>
+            <td></td>
+            <td>
+                <h4>我承诺</h4>
+                <ul>
+                    <li>年满18岁、单身</li>
+                    <li>抱着严肃的态度</li>
+                    <li>真诚寻找另一半</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

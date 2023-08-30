@@ -1,0 +1,49 @@
+<!--
+创建数组对象的两种方式
+1、字面量方式
+    var arr = [1,2,3,4,];
+    console.log(arr[0]);
+2、new Array()
+    创建了一个空的数组
+    var arr1 = new Array(2);这个2表示数组的长度为2，里面有2个空的数组元素
+    console.log(arr1);
+    var arr2 = new Array(2,3);等价于[2,3]这样表示里面有2个元素，是2和3
+    console.log(arr2);
+3、检测是否为数组
+    1、instanceof 运算符，它可以用来检测是否为数组
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组对象</title>
+    <script>
+        function reverse(arr){
+            if(arr instanceof Array){
+                var newArr = [];
+                for( var i = arr.length - 1 ; i >= 0 ; i-- ){
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            }else{
+                return 'error 这个参数必须是数组';
+            }
+        }
+        console.log(reverse([1,2,3]));
+        console.log(reverse(1,2,3));
+        var arr = [];
+        console.log(arr instanceof Array);
+
+        //Array.isArray([1,2,3]);用于确定传递的值是否是一个Array
+        //Array.isArray(obj); obj是需要检测的值；是H5新增的方法，ie9以上才支持
+        console.log(Array.isArray([1,2,3]));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!--
+字符串长度：
+    字符串是由若干字符组成的，这些字符的数量就是字符串的长度。通过字符串的length属性可以获取整个字符串的长度
+    var strMsg = "我是帅气的程序员！";
+    alert(strMsg.length);
+
+字符串拼接
+    多个字符串之间可以使用+进行拼接。其拼接方式为：字符串+任何类型=拼接之后的新字符串
+    拼接前会把与字符串相加的任何类型转成字符串，再拼接一个新的字符串
+    数值相加，字符相连
+
+字符串拼接加强版
+    我们经常会将字符串和变量来拼接，因为变量可以很方便地修改里面的值
+    变量是不能添加引号的，因为加引号的变量会变成字符串
+
+1、布尔型Boolean
+    布尔类型有两个值：true和false。其中true表示真(对)，而false表示假(错)
+    布尔型和数字型相加的时候，true的值为1，false的值为0
+    console.log(true+1);    2
+    console.log(false+1);   1
+
+2、Undefined和Null
+    一个声明后没有被赋值的变量会有一个默认值undefined(如果进行相连或者相加时，注意结果)
+    一个声明变量给null值，里面存储的值为空(学习对象时，我们继续研究null)
+
+3、字面量
+    字面量是在源代码中一个固定值的表示法，通俗来说，就是字面量表示如何表达这个值
+    数字字面量：8，9，10
+    字符串字面量：'黑马程序员'，'大前端'
+    布尔字面量：true,false
+
+4、数据类型转换
+    使用表单、prompt获取过来的数据默认是字符串类型的。此时就不能直接简单的进行加法运算，而需要转换变量的数据类型。
+    通俗来说，就是把一种数据类型的变量转换成另外一种数据类型
+    我们通常会实现3种方式的转换：
+    *转换为字符串类型
+        方式            说明                            案例
+    toString()        转成字符串                    var num=1;alert(num.toString());
+    String()强制转换    转成字符串                    var num=1;alert(String(num));
+    加号拼接字符串      和字符串拼接的结果都是字符串      var num=1;alert(num+"我是字符串");
+    4.1、toString()和String()使用方式不一样
+    4.2、三种转换方式，我们更喜欢用第三种加号拼接字符串转换方式。这一种方式也被称之为隐式转换
+
+    *转换为数字型
+    方式                     说明                         案例
+    parseInt(string)函数     将string类型转成整数数值型      parseInt('78')
+    parseFloat(string)函数   将string类型转成浮点数数值型    parseFloat('78.21')
+    Number()强制转换函数      将string类型转换为数值型        Number('12')
+    js隐式转换(- * /)         利用算数运算隐式转换为数值型     '12'-0
+
+
+    *转换为布尔型    
+    方式            说明                案例
+    Boolean()函数   其他类型转成布尔值     Boolean('true');  
+    *代表空、否定的值会被转换为false。如‘’(一个空字符串)、0、NaN、null、undefined
+    *其余值都会被转换为true
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS数据类型2</title>
+    <script>
+        var str = 'my name is peter';
+        console.log(str.length);
+
+        console.log('沙漠'+'骆驼');
+        console.log('pink老师'+18);
+        console.log(12+12);
+        console.log('12'+12);
+
+        //变量不要写到字符串里面
+        var age =18;
+        console.log('pink老师'+age+'岁');
+
+        var flag = true;
+        var flag1 = false;
+        console.log(flag+1);//参与运算当1来看
+        console.log(flag1);//参与运算当0来看
+
+        var str1 ;
+        console.log(str1);
+        var variable = undefined;
+        console.log(variable+'pink老师');
+        console.log(variable+1);
+
+        var space = null;
+        console.log(space+'pink');
+        console.log(space+1);
+
+        var num =10;
+        console.log(typeof num);
+        var str2 = 'pink';
+        console.log(typeof str2);
+        var flag2 = true;
+        console.log(typeof flag2);
+        var timer = null;
+        console.log(typeof timer);
+
+        var num = 10;
+        var str3 = num.toString();
+        console.log(typeof str3);
+        console.log(String(num));
+        console.log(num+' ');
+
+        var age2 = 19;
+        console.log(parseInt(age2));
+
+        console.log(parseInt('3.14'));
+        console.log(parseInt('120px'));//做动画会用到，把单位去掉的方法
+        console.log(parseInt('rem120px'));//NaN
+
+        console.log('12'-0);
+        console.log('123'-'120');
+        console.log('123' * 1);
+
+        console.log(Boolean(''));
+        console.log(Boolean('小白'));
+        console.log(Boolean(0));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

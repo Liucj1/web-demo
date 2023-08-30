@@ -1,0 +1,48 @@
+<!--
+方法名                说明                                               返回值
+push(参数1...)       末尾添加一个或多个元素，注意修改原数组                  并返回新的长度
+pop()               删除数组最后一个元素，把数组长度减1无参数，修改原数组      返回它删除的元素的值
+unshift(参数1...)   向数组的开头添加一个或更多元素，注意修改原数组            并返回新的长度  
+shift()             删除数组的第一个元素，数组长度减1无参数，修改原数组       并返回第一个元素的值
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加删除数组元素</title>
+    <script>
+        var arr = [1,2,3];
+        arr.push(4);
+        console.log(arr);
+
+        var arr1 = [1,2,3];
+        arr1.unshift('red');
+        console.log(arr1);
+
+        var arr2 = [1,2,3];
+        console.log(arr2.pop());
+        console.log(arr2);
+
+        var arr3 = [1,2,3];
+        arr3.shift();
+        console.log(arr3);
+
+        var arr4 = [1500,1200,2000,2100,1800];
+        var newArr = [];
+        for(var i = 0 ; i < arr4.length ; i++){
+            if(arr4[i] < 2000){
+                 // newArr[newArr.length] = arr[i];
+            newArr.push(arr4[i]);
+            }         
+        }
+        newArr.sort();
+        console.log(newArr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

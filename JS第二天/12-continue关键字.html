@@ -1,0 +1,35 @@
+<!--  continue关键字
+continue关键字用于立即跳出本次循环，继续下一次循环(本次循环体中continue之后的代码就会少执行一次)
+例如：吃5个包子，第3个有虫子，就扔掉第3个，继续吃第4个、第5个包子。代码实现如下：
+
+break关键字用于立即跳出整个循环(循环结束)
+例如：吃5个包子，第3个有虫子，其余的就不吃了，代码实现如下：
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue关键字</title>
+    <script>
+        for(var i = 1; i <= 5; i++){
+            if( i == 3 ){
+                continue;//只要遇见continue就退出本次循环，直接跳到i++s
+            }
+            console.log('我在吃第' + i + '个包子');
+        }
+
+        for(var a = 1; a <= 5; a++){
+            if( a == 3){
+                break;
+            }
+            console.log('我在吃第' + a + '个包子');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

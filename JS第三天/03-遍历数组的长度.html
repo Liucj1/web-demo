@@ -1,0 +1,52 @@
+<!--
+数组的长度
+    使用“数组名.length”可以访问数组元素的数量(数组长度)
+    *数组的长度是元素个数，不要跟索引号混淆
+    *arr.length动态监测数组元素的个数
+
+1、声明一个保存最大元素的变量max
+2、默认最大值可以取数组中的第一个元素
+3、遍历这个数组，把里面每个数组元素和max比较
+4、如果这个数组元素大于max，就把这个数组元素存到max里面，否则继续下一轮比较
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组长度</title>
+    <script>
+        var arr = ['刘备','张飞','关羽','马超','黄忠','赵云'];
+        for(var i = 0; i < arr.length ; i++){
+            console.log(arr[i]);
+        }
+        console.log(arr.length);
+
+        var arr1 = [2,6,1,4,8];
+        var sum = 0;
+        var avg = 0;
+        for(var i = 0; i < arr1.length ; i++){
+            sum += arr1[i];//我们加的是数组元素arr[i]，不是计数器i
+        }
+        avg = sum / arr1.length;
+        console.log(sum);
+        console.log(parseFloat(avg));
+
+        //求数组[2,6,1,77,52,25,7]中的最大值
+        var arr2 = [2,6,1,77,52,25,7];
+        var max = arr2[0];
+        for(var i = 1; i < arr2.length; i++){
+            if( arr2[i] > max){
+                max = arr2[i]
+            }
+        }    
+        console.log('数组里的最大值是：' + max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

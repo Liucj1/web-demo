@@ -1,0 +1,49 @@
+<!--标签语义，也就是标签的含义，这个标签是用来干嘛的
+根据标签的语义，在合适的地方给一个最为合理的标签，可以让标签结构更清晰
+
+标题标签<h1>-<h6>，h的意思是head，头部的意思
+1、加了标题的文字会变的更粗，字号也会变的更大
+2、一个标题独占一行
+-->
+
+<!--
+段落标签，<p>标签用于定义段落，可以将整个网页分为若干段落
+<p>我是一个段落标签</p>。p是paragraph的缩写，意思是段落
+1、文本在一个段落中会根据浏览器窗口的大小自动换行
+2、段落和段落之间保有空隙
+-->
+
+<!--
+换行标签。在一个段落中的文字会从左到右依次排序，直到浏览器窗口的右端才会自动换行。
+如果要某段文本强制换行显示，就需要使用换行标签<br/>。br是break的缩写，意思为打断、换行
+1、<br/>是一个单标签
+2、<br/>标签只是简单的开始新的一行，跟段落不一样。段落之间会插入一些垂直的间距
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签语义+标题标签</title>
+</head>
+<body>
+    <h1>标题标签</h1>
+    <h2>标题标签一共六级</h2>
+    <h3>文字加粗</h3>
+    <h4>字号变大</h4>
+    <h5>由大到小依次减</h5>
+    <h6>标题标签</h6>
+    <p>为了通过补丁工具的检查，基调听云不能在编译时 Application 类嵌码。可以在基调听云 tingyun.properties 配置文件中对 Application 类过滤。这样会影响基调听云采集应用启动数据，故需要对 Application 类手动嵌码。</p>
+    <p>1、在 tingyun.properties 配置文件（没有则新建，在项目根目录和主 module 下各一份）中，配置对 阿里 Application 类和项目自身 RealApplication 类过滤嵌码：
+#等号后为完整类名，点用斜杠替换，多个类名用英文逗号隔开
+#com/nbs/app/MyApp为示例，需替换为项目 real Application 类
+noInstrumentedClasses=com/nbs/app/SophixStubApplication,com/nbs/app/MyApp</p>
+<p>2.在Application的onCreate()方法的首行调用以下方法：<br/>
+NBSAppInstrumentation.attachBaseContextBeginIns(this.getApplicationContext());<br/>
+NBSAppInstrumentation.attachBaseContextEndIns();<br/>
+NBSAppInstrumentation.applicationCreateBeginIns();<br/>
+在Application的onCreate()方法的末行调用以下方法：<br/>
+NBSAppInstrumentation.applicationCreateEndIns();</p>
+</body>
+</html>

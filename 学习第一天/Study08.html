@@ -1,0 +1,71 @@
+<!-- 超链接标签
+在html标签中，<a>标签用于定义超链接，作用是从一个页面链接到另一个页面
+1、超链接的语法格式
+<a href="跳转目标" target="目标窗口的弹出方式"> 文本或图像 </a>
+a是anchor的缩写，意思是：锚
+属性     作用
+href     用于指定链接目标的url地址，(必须属性)当为标签应用href属性时，它就具有了超链接的功能
+target   用于指定链接页面的打开方式，其中_self为默认值，_blank为在新窗口中打开方式
+
+2、超链接的分类
+ 1、外部链接。例如：<a href="http://ww.baidu.com"> 百度 </a>
+ 2、内部链接：网站内部页面之间的相互链接，直接链接内部页面名称即可。例如：<a href="index.html">首页</a>
+ 3、空链接：如果当时没有确定链接目标时，<a href="#">首页</a>
+ 4、下载链接：如果href里面地址是一个文件或者压缩包，会下载这个文件
+ 5、网页元素链接：在网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接
+ 6、锚点链接：点击链接，可以快速定位到页面中的某个位置
+ 在链接文本的herf属性中，设置属性值为 #名字 的形式，如<a href="#two">第2集</a>
+ 找到目标位置标签，里面添加一个id属性=刚才的名字，如：<h3 id="two">第2集介绍</h3>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>链接</title>
+</head>
+<body>
+    <h3 id="top">首页</h3>
+    <h4>1、外部链接</h4>
+    <!--target打开窗口的方式，默认的值时_self，在当前窗口打开页面；_blank是在新窗口打开页面-->
+    <a href="http://www.baidu.com" target="_self">百度</a><br/>
+    <a href="http://www.baidu.com" target="_blank">百度</a>
+
+    <h4>2、内部链接</h4>
+    <a href="Study06.html" target="_blank">第一个页面</a>
+
+    <h4>3、空链接</h4>
+    <a href="#">空链接</a>
+
+    <h4>4、下载链接：地址链接的是文件、.exe或者是zip等压缩包形式</h4>
+    <a href="nbs-newlens-android-2.16.00.zip">下载文件</a>
+
+    <h4>5、网页元素的链接</h4>
+    <a href="http://www.baidu.com" target="_blank"><img src="11.webp"/></a>
+
+    <h2>目录</h2>
+    1、早年<br/>
+    2、<a href="#hello">你好</a><br/>
+    3、<a href="#live">晚年</a><br/>
+    4、不好<br/>
+    5、人文<br/>
+    6、历史<br/>
+
+    <h3>早年</h3>
+    111111111111
+    <h3 id="hello">你好</h3>
+    111111111111
+    <h3 id="live">晚年</h3>
+    111111111111
+    <h3>不好</h3>
+    111111111111
+    <h3>人文</h3>
+    111111111111
+    <h3>历史</h3>
+    111111111111
+
+    <h3><a href="#top">返回顶部</a></h3>
+
+</body>
+</html>

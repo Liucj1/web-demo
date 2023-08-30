@@ -1,0 +1,10 @@
+{
+    "breadcrumbs.symbolSortOrder": "name",
+    "explorer.sortOrder": "foldersNestsFiles",
+    "explorer.sortOrderLexicographicOptions": "default",
+    "explorer.openEditors.sortOrder": "editorOrder",
+    "scm.repositories.sortOrder": "discovery time",
+    "scm.defaultViewSortKey": "path",
+    "problems.sortOrder": "severity",
+    "git.branchSortOrder": "committerdate"
+}

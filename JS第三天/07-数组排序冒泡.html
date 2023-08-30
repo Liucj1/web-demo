@@ -1,0 +1,39 @@
+<!--
+冒泡排序：是一种算法，把一系列的数据按照一定的顺序进行排列显示(从小到大或从大到小)
+算法：观察它的执行过程。从而找到其中的规律，把它转化成代码
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+    <script>
+        // var num1 = 10;
+        // var num2 = 20;
+        // var tamp;
+        // temp = num1;
+        // num1 = num2;
+        // num2 = temp;
+        // console.log(num1,num2);
+
+        var arr = [5,4,3,2,1];
+        for(var i = 0; i <= arr.length - 1; i++){ //外层循环管交换的趟数
+            for(var j = 0; j <= arr.length - i ; j++){ //里层循环管每一趟的交换次数
+                //内部交换2个变量的值，前一个和后一个数组元素相比较
+                if(arr[j] > arr[j + 1]){
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+                console.log(arr);
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

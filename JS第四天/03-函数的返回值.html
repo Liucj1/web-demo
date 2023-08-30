@@ -1,0 +1,64 @@
+<!--
+return语句
+    有的时候，我们会希望函数将值返回给调用者，此时通过使用return语句就可以实现
+    function 函数名(){
+        return 需要返回的结果;
+    }
+    函数名();
+*我们函数只是实现某种功能，最终的结果需要返回给函数的调用者:函数名()，通过return来实现的
+*只要函数遇到return，就把后面的结果返回给函数的调用者:函数名()；函数名()=return后面的结果
+
+我们的函数如果有return，则返回的是return后面的值；如果函数没有return，则返回undefined
+break：结束当前的循环体(如for、while)
+continue：跳出本次循环，继续执行下次循环(如for、while)
+return：不仅可以退出循环，还能够返回return语句中的值，同时还可以结束当前的函数体内的代码
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数的返回值</title>
+    <script>
+        function getResult(){
+            return 666;
+        }
+        console.log(getResult());
+        
+        function cook(food){
+            return food;
+        }
+        console.log(cook('大肘子'));
+
+        function getMax(arr){
+            var max = arr[0];
+            for(var i = 1; i < arr.length; i++){
+                if(arr[i] > max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax([5,2,99,101,67,77]));
+        var re = getMax([4,9,1,3,55,6]);
+        alert(re);
+
+        //return终止函数
+        //return只能返回一个值。如果用逗号隔开多个值，以最后一个值为准
+        function getStop(num1,num2){
+            return [num1 + num2 , num1 * num2];   //return后面的代码不会被执行
+            alert('不会显示的');
+        }
+        console.log(getStop(1,2));
+
+        function fun1(){
+
+        }
+        console.log(fun1());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

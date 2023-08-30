@@ -1,0 +1,41 @@
+<!-- 双重for循环
+很多情况下，单层for循环并不能满足我们的需求。比如我们要打印一个5行5列的图形，此时就可以通过循环嵌套实现
+循环嵌套是指在一个循环语句中再定义一个循环语句的语法结构。例如在for循环语句中，可以再嵌套一个for循环，这样的for循环语句我们称之为双重for循环
+1、for(外层的初始化变量; 外层的条件表达式; 外层的操作表达式){
+    for(里层的初始化变量; 里层的条件表达式; 里层的操作表达式){
+        //执行语句;
+    }
+}
+2、我们可以把里面的循环看作是外层循环的语句
+3、外层循环循环一次，里面的循环执行全部
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双重for循环</title>
+    <script>
+        for(var i = 1; i<= 3; i ++){
+            console.log('这是外层第' + i  + '次循环');
+            for(var j = 1; j <= 3; j++){
+                console.log('这是里层第' + j + '次循环');
+            }
+        }
+        var rows = prompt('请您输入行数');
+        var cols = prompt('请您输入列数');
+        var str = '';
+        for(var a = 1; a <= rows ;a++){
+            for(var b =1; b <= cols ; b++){
+                str = str + '*';
+            }
+            str = str + '\n';
+        }
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

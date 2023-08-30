@@ -1,0 +1,67 @@
+<!--
+浏览器中提供的XMLHttpRequest用法比较复杂，所以Jquery对XMLHttpRequest进行了封装，提供了一系列ajax相关的函数
+Jquery中发起ajax请求最常用的三个方法如下：
+1、$.get()
+    专门用来发起get请求，从而将服务器上的资源请求到客户端来进行使用
+    $.get(url,[data],[callback])
+    参数名      参数类型        是否必选        说明
+    url        string          是           要请求的资源地址
+    data       object          否           请求资源期间要携带的参数
+    callback   function        否           请求成功时的回调函数
+    1、不带参数的写法
+    $.get('https://www.baidu.com',function(res){
+        console.log(res);   这里的res是服务器返回的数据
+    })
+
+    2、带参数的写法
+    $.get('https://www.baidu.com',{id:1},function(res){
+        console.log(res);   这里的res是服务器返回的数据
+    })
+
+2、$.post()
+    $.post(url,[data],[callback])
+    参数名      参数类型        是否必选        说明
+    url        string           是          提交数据的地址
+    data       object           否          要提交的数据
+    callback   function         否          数据提交成功时的回调函数
+
+3、$.ajax()
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解ajax</title>
+    <script src="./jquery-1.12.4.min.js"></script>
+    
+</head>
+<body>
+    <button id = "btnGet">发起不带参数的Get请求</button>
+    <script>
+        var date=new Date();
+        var timer=date.getTime().toString();
+        $(function(){
+            $('#btnGet').on('click',function(){
+                $.get('http://localhost:60160/学习第一天/Study01.html?t=' + timer,{id:1},function(res){
+                    console.log(res);
+                })
+            })
+        })
+    </script>
+
+    <button id = "btnPost">发起带参数的Post请求</button>
+    <script>
+        $(function(){
+            $('#btnPost').on('click',function(){
+                $.post('http://localhost:60160/学习第一天/Study02.html',{bookname: '水浒传',author: '施耐庵',publisher: '北京图书'},function(res1){
+                    console.log(res1);
+                })
+            })
+        })
+    </script>
+</body>
+</html>

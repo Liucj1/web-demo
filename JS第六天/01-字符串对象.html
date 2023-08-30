@@ -1,0 +1,38 @@
+<!--
+对象才有属性和方法，复杂数据类型才有属性和方法
+简单数据类型为什么会有length属性呢？
+基本包装类型：就是把简单数据类型包装成为了复杂数据类型
+(1)把简单数据类型包装为复杂数据类型
+var temp = new String("andy");
+(2)把临时变量的值给str
+str = temp;
+(3)销毁这个临时变量
+temp = null;
+
+字符串不可变：指的是里面的值不可变。虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本包装类型</title>
+    <script>
+        var str = "andy";
+        console.log(str.length);
+        console.log(str);
+
+        var str = "abc";
+        str = "hello";
+        //当重新给str赋值的时候，常量abc不会被修改，依然存在内存中
+        //重新给字符串赋值，会重新在内存中开辟空间，这个特点就是字符串的不可变
+        //由于字符串的不可变，在大量拼接字符串的时候就会有效率
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

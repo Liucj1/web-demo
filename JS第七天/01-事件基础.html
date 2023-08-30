@@ -1,0 +1,55 @@
+<!--
+JS使我们有能力创建动态页面，而事件是可以被JS侦测到的行为
+简单理解：触发->响应机制
+网页中的每个元素都可以产生某些可以触发JS的事件。例如：我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作
+
+事件由三部分组成：事件源、事件类型、事件处理程序。我们称为事件三要素
+    *事件源：事件被触发的对象。谁->按按钮
+    *事件类型：如何触发，什么事件。比如鼠标点击、还是鼠标经过、还是键盘按下
+    *事件处理程序：通过一个函数赋值的方式完成
+
+执行事件的步骤
+1、获取事件源
+2、注册事件(绑定事件)
+3、添加事件处理程序(采取函数赋值形式)
+
+鼠标事件         触发条件
+onclick        鼠标点击左键触发
+onmouseover    鼠标经过触发
+onmouseout     鼠标离开触发
+onfocus        获得鼠标焦点触发
+onblur         失去鼠标焦点触发
+onmousemove    鼠标移动触发
+onmouserup     鼠标弹起触发
+onmousedown    鼠标按下触发
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件概述</title>
+</head>
+<body>
+    <button id="btn">刘城郡</button>
+    <script>
+        //点击按钮，弹出对话框
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            alert('lcj');
+        }
+
+    </script>
+
+    <div>234</div> 
+    <script>
+        //获取事件源
+        var div = document.querySelector('div');
+        div.onclick = function(){
+            console.log('我被选中了');
+        }
+    </script>
+</body>
+</html>

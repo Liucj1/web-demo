@@ -1,0 +1,71 @@
+<!--
+在JS中，主要有三种类型的循环语句：
+在程序中，一组被重复执行的语句被称为循环体，能否继续重复执行，取决于循环的终止条件。由循环体及循环的终止条件组成的语句。被称之为循环语句
+*for循环
+    for循环主要用于把某些代码循环若干次，通常跟计数有关系。
+    for(初始化变量;条件表达式;操作表达式){
+        循环体;
+    }
+    *初始化变量：就是用var声明的一个普通变量，通常用于作为计数器使用
+    *条件表达式：就是用来决定每一次循环是否继续执行，就是终止条件
+    *操作表达式：是每次循环最后执行的代码，经常用于我们计数器变量进行更新(递增或者递减)
+
+    *首先执行里面的计数器变量，var i = 1。但是这句话在for里面只执行一次
+    *其次，i<=10，来判断是否满足条件。如果满足条件，就去执行循环体
+    *最后去执行i++，i++是单独写的代码。递增第一轮结束
+
+    ！断点调试：
+        断点调试是指自己在程序的某一行设置一个断点。调试时，程序运行到这一行就会停住，然后你可以一步一步往下调试。调试过程中可以看各个变量当前的值。出错的话，调试到出错的代码行即显示错误，停下
+        
+
+*while循环
+*do...while循环
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+    <script>
+        var num = 0;
+        for(var i = 1;i <= 10;i++){
+            num += i;
+            console.log(i);
+        }
+        console.log(num);
+
+        var even = 0;
+        var odd = 0;
+        for(var i = 1; i <= 100;i++){
+            if(i % 2 == 0){
+                even += i;
+            }else{
+                odd += i;
+            }
+        }
+        console.log('偶数和：'+ even);
+        console.log('奇数和：'+ odd);
+
+        var peo = prompt('输入班级人数：');
+        var sum = 0;
+        for(var i = 1; i <= peo; i++){
+            var score = prompt('输入成绩：');
+            sum += parseFloat(score);
+        }
+        alert('总成绩是：' + sum);
+
+        //追加字符串的方式
+        str = '';
+        for(var i = 1; i <= 5; i++){
+            str += '$' ;
+        }
+        console.log(str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

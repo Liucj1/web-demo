@@ -1,0 +1,97 @@
+<!--
+页面布局要学习三大核心：盒子模型、浮动和定位。
+网页布局过程：
+    *先准备好相关的网页元素，网页元素基本上都是盒子Box
+    *利用CSS设置好盒子样式，然后摆到相应位置
+    *往盒子里面装内容
+盒子模型组成：
+    *所谓盒子模型：就是把HTML页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器
+    *盒子里面的内容：border边框、content内容、padding内边距、margin外边距
+    1、border边框：
+        *边框有三部分组成，边框宽度(粗细)、边框样式、边框颜色
+        *语法：border-width || border-style || border-color
+    2、边框复合性写法(简写)
+        border: 1px solid red;  没有先后顺序
+    3、边框分开写法：
+        border-top: 1px solid red;  只设定上边框，其余同理
+        border-bottom：下边框
+        border-left：左边框
+        border-right：右边框
+    4、表哥的细线边框
+        border-collapse属性控制浏览器绘制表格边框的方式。它控制相邻单元格的边框
+        语法：
+            border-collapse:collapse;
+        *collapse单词是合并的意思
+        *border-collapse:collapse;表示相邻边框合并在一起
+    5、边框会影响盒子实际大小
+        边框会额外增加盒子的实际大小，因此我们有两种解决方案
+        *测量盒子大小的时候，不量边框
+        *如果测量的时候包含了边框，则需要width/hright减去边框宽度
+    6、内边距(padding)
+        padding属性用于设置内边距，即边框与内容之间的距离
+        属性                作用
+        padding-left       左内边距
+        padding-right      右内边距
+        padding-top        上内边距
+        padding-bottom     下内边距
+
+        padding会影响盒子实际的大小。如果盒子已经有了宽度和高度，此时再指定内边距，会撑大盒子
+        解决办法：如果保证跟效果图大小一致，则让width/height减去多出来的内边距大小即可
+        如果盒子本身没有指定width/height属性，则此时padding不会撑开盒子的大小
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: tomato;
+            border-top: 1px dashed orange;
+            /*
+            soild：实线边框
+            dashed：虚线边框
+            double：双线边框
+            none：无边框，默认值
+            dotted：点线边框
+            */
+            padding:30px 20px;
+            /*
+            简写：
+            值的个数                        表达意思
+            padding:5px                   1个值，代表上下左右都是5像素内边距
+            padding: 5px 10px;            2个值，代表上下内边距是5像素，左右内边距是10像素  
+            padding: 5px 10px 20px;       3个值，代表上内边距5像素，左右内边距是10像素，下内边距20像素
+            padding: 5px 10px 20px 30px;  4个值，上是5像素，右是10像素，下是20像素，左使30像素，顺时针
+            */
+        }
+
+        .div1{
+            width: 190px;
+            height: 190px;
+            background-color: aqua;
+            border: 5px solid red;
+        }
+        p{
+            background-color: aqua;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="div1"></div>
+    <div>
+        盒子内容是content盒子内容是content盒子内容是content盒子内容是content
+    </div>
+</body>
+</html>

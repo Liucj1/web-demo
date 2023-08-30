@@ -1,0 +1,24 @@
+<!--
+<label>标签为input元素定义标签(标签)
+<label>标签可以绑定一个表单元素。当点击<label>标签内的文本时，浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上，用来增加用户体验
+<label for="sex">男</label>
+<input type="radio" name="sex" id="sex"/>
+label标签的for属性应当与相关元素的id属性相同
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label标签</title>
+</head>
+<body>
+    <label for="username">用户名：</label>
+    <input type="text" id="username"/><br/>
+
+    <label for="man" >男</label><input type="radio" name="sex" id="man"/>
+    <label for="woman" >女</label><input type="radio" name="sex" id="woman"/>
+</body>
+</html>

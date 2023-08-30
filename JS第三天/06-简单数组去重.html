@@ -1,0 +1,36 @@
+<!--
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除指定数组元素，简单的数组去重</title>
+    <script>
+        // 需要一个新数组用于存放筛选之后的数据
+        // 遍历原来的数组，把不是0的数据添加到新数组里面(此时要注意采用数组名+索引的格式接收数据)
+        // 新数组里面的个数，用length不断累加
+        var arr = [2,0,6,1,77,0,52,0,25,7];
+        var newArr = [];
+        for(var i = 0; i < arr.length; i++){
+            if( arr[i] != 0){
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr);
+
+        //
+        var arr1 = ['red','green','blue','pink','purple'];
+        var newArr1 = [];
+        for(var i = arr1.length - 1; i >= 0; i--){
+            newArr1[newArr1.length] = arr1[i];
+        }
+        console.log(newArr1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

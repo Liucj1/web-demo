@@ -1,0 +1,69 @@
+<!--
+*JS是世界上最流行的语言之一。是一种运行在客户端的脚本语言
+*脚本语言：不需要编译。运行过程中由js解释器(js引擎)逐行来进行解释并执行
+*现在也可以基于Node.js技术进行服务器端编程
+
+JS的作用：
+*表单动态校验(密码强度检测)
+*网页特效
+*服务端开发(Node.js)
+*桌面程序(Electron)
+*App(Cordova)
+*控制硬件(物联网Ruff)
+*游戏开发(cocos2d-js)
+
+浏览器执行JS
+浏览器分为两大部分：渲染引擎和JS引擎
+*渲染引擎：用来解析html和Css，俗称内核。比如chrome浏览器的blink，老板呢的webkit
+*JS引擎：也称为JS解释器。用来读取网页中的JS代码，对其进行处理后运行。比如chrome浏览器的v8
+
+JS的组成
+由ECMAScript(JS语法)、DOM(页面文档对象模型)、BOM(浏览器对象模型)
+*DOM(页面文档对象模型)：Document Object Model，是W3C组织推荐的处理可扩展标记语言的标准编程接口。通过DOM提供的接口可以对页面上的各种元素进行操作(大小、位置、颜色等)
+*BOM(浏览器对象模型)：Browser Object Model，提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。通过BOM可以操作浏览器窗口。比如弹出框、控制浏览器跳转、获取分辨率等
+
+JS初体验
+    JS有三种书写位置。分别为：行内、内嵌和外部。
+    1、行内式JS
+    <input type="button" value="点我试试" onclick="alert('Hello World')">
+    *可以将单行或少量JS代码写在HTML标签的事件属性中(以on开头的属性)。如：onclick
+    *注意单双引号的使用：在HTML中我们推荐使用双引号，JS中我们推荐使用单引号
+    *可读性差，在HTML中编写JS大量代码时，不方便阅读
+    *引号易错，引号多层嵌套匹配时，非常容易弄混
+    *特殊情况下使用
+
+    2、内嵌式JS
+    <script>
+        alert('Hello World');
+    </script>
+    *可以将多行JS代码写到<script>标签中
+    *内嵌JS是学习时常用的方式
+
+    3、外部JS文件
+    <script src="my.js"></script>
+    *利于HTML页面代码结构化，把大段JS代码独立到HTML页面之外。既美观，也方便文件级别的复用
+    *引用外部JS文件的script标签中间不可以写代码
+    *适合于JS代码量比较大的情况
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <!--2、内嵌式的JS-->
+    <script>
+        alert('我是编程语言');
+        alert('来控制电脑网页弹出你好的');
+        //1、单行注释   ctrl+/
+        /*2、多行注释   shift+alt+a
+        */
+    </script>
+    <script src="my.js"></script>
+</head>
+<body>
+    <!--1、行内式的JS。直接写到元素的内部-->
+    <input type="button" value="刘城郡" onclick="alert('孙然')">
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!--
+5、背景图像固定(背景附着)
+    background-attachment属性设置背景图像是否固定或者随着页面的其余部分滚动
+    background-attachment后期可以制作视差滚动的效果
+    background-attachment:scroll | fixed
+    参数        作用
+    scroll     背景图像是随对象内容滚动
+    fixed      背景图像固定
+
+6、背景复合写法
+    为了简化背景属性的代码，我们可以将这些属性合并简写在同一个属性background中，从而节约代码量
+    当使用简写属性时，没有特定的书写顺序。一般习惯约定顺序为：
+    background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置；
+    实际开发中，我们更提倡的写法
+
+7、背景色半透明
+    最新的CSS中提供了背景颜色半透明的效果
+    background:rgba(0,0,0,0.3);     r代表红、g代表绿、b代表蓝
+    *最后一个参数时alpha透明度的简写，取值范围在0～1之间
+    *我们习惯把0.3的0省略掉，写为bcakground:rgba(0,0,0,.3);
+    *注意：背景半透明是指盒子背景半透明。盒子里面的内容不受影响
+    *CSS新增属性，是ie9+版本浏览器才支持的
+    *但是现在实际开发，我们不太关注兼容性写法。可以放心使用
+
+    背景图片：实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片。优点是非常便于控制位置(精灵图也是一种运用场景)
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景附着</title>
+    <style>
+        body{
+            /* background-image: url(../images/6913450406338.jpg);
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            background-attachment: fixed; */
+            background: black url(../images/6913450406338.jpg) no-repeat fixed center top;
+            color: red;
+            font-size: 2em;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 0, 0, .3);
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+    <p>你好你好你好你好</p>
+</body>
+</html>
