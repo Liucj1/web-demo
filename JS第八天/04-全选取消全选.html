@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全选取消全选</title>
+    <script type="text/javascript">!function(t,e,n,a,r){var c="__ty_web_inject_guard",i="__ty_web_tpl_guard",o="https:",s="http:",d="//";function g(){try{var t=[].slice.call(arguments);g.q.push(t)}catch(e){}}function f(t){var e,a="tingyun_agent",r=n.getElementsByTagName("head")[0];!n.getElementById(a)&&r&&((e=n.createElement("script")).id=a,e.async=!0,e.crossorigin="anonymous",e.src=t,r.appendChild(e))}try{if(!e[i]){g.q=[],e[a]=g,e.TINGYUN_COOKIE_VALUE=n.cookie;var h="TINGYUN_DATA=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";n.cookie=h,n.cookie="".concat(h,"path=/"),e[i]=!0}if(!e[c]){if(!/(MSIE [0-6].\d+)/.test(e.navigator.userAgent)){var y={};t(y);var _,u,v=y.config||{};try{_=e.location.protocol}catch(m){}var p=v.addr;if(p?u=_===o?p.https:_===s?p.http:p.other:0!==(u=r||"").indexOf(o+d)&&0!==u.indexOf(s+d)&&(0===u.indexOf(d)&&(u=u.substring(2)),u&&(_!==o&&_!==s&&(_=o),u=_+d+u)),u)n.getElementsByTagName("head")[0]?(f(u),e[c]=!0):e.addEventListener&&(e.addEventListener("DOMContentLoaded",(function(){try{f(u)}catch(m){}})),e[c]=!0)}try{if("PerformanceLongTaskTiming"in e){var T="entries",l=g.po={};l[T]=[];var E=l.observer=new PerformanceObserver((function(t){try{l[T]&&(l[T]=l[T].concat(t.getEntries()))}catch(t){}}));E.observe({entryTypes:["longtask"]})}}catch(m){}}}catch(m){}}(function(ty_tpl){ty_tpl.config={"addr":{"http":"http://10.128.2.95:8588/js/tingyun-origin-106672.js","https":"http://10.128.2.95:8588/js/tingyun-origin-106672.js","other":"http://10.128.2.95:8588/js/tingyun-origin-106672.js"}}},window,document,"TingyunWeb","");</script>
+<script type="text/javascript">
+  window.TingyunWeb("init", 
+   {
+	"domain":"10.128.2.95:8588",
+	"token":"745e2dc4adb342ab8db7c8f8916d0c3d",
+	"key":"WzGc7sQNwao",
+	"id":"QPo-y6LCVc8",
+	"common":{
+		"protocolDomainConfig":{
+			"http":"http://10.128.2.95:8588",
+			"https":"http://10.128.2.95:8588",
+			"other":"http://10.128.2.95:8588"
+		}
+	},
+	"page":{
+		"drThreshold":4005,
+		"fpThreshold":2555,
+		"leThreshold":7001
+	},
+	"replay":{
+		"enabled":true,
+		"sampleRate":1.0
+	}
+}  )
+</script>
+</head>
+<body>
+    <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll" />
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iphone10</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iphone12</td>
+                    <td>9000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iphone11</td>
+                    <td>10000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var j_cbAll = document.getElementById('j_cbAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName("input");
+
+        j_cbAll.onclick = function(){
+            for(var i = 0; i < j_tbs.length; i++){
+                j_tbs[i].checked = this.checked;
+            }
+        }
+        for(var i = 0; i < j_tbs.length; i++){
+            j_tbs[i].onclick = function(){
+                var flag = true;
+                for(var i = 0; i < j_tbs.length; i++){
+                    if(!j_tbs[i].checked){
+                        flag = false;
+                        break;
+                    }
+                }
+                j_cbAll.checked = flag;
+            }
+        }
+    </script>
+</body>
+</html>

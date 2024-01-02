@@ -7,15 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>实训-圣诞老人</title>
+<<<<<<< HEAD
     
     <script async src="../7HGdOvbvjT4.js"></script>
     <script>localStorage.setItem('TY_USER_ID', 'user1');</script>
+=======
+    <!-- <script src="../vue工程/test_vue/tingyun-agent-browser-ysf.js"></script> -->
+    <!-- <script>localStorage.setItem('TY_USER_ID', 'user1');</script> -->    
+    <script src="./7HGdOvbvjT4.js"></script>
+>>>>>>> 5e542a1 (WebStudy)
     <script>
         window.addEventListener('error', (error) => {
             console.log('捕获到异常：', error);
         })
     </script>
     <script>
+<<<<<<< HEAD
         setTimeout(function() {
             try {
                 var i = 1
@@ -24,14 +31,64 @@
                     i++
                 }
             }catch(e) {}
+=======
+        function sendAjax(){
+            const xhr = new XMLHttpRequest();
+            xhr.onload = function(){
+                console.log(xhr.response);
+            }
+            xhr.setRequestHeader('Content-type','application/json, charset=utf-8')
+            xhr.open("GET", "http://www.httpbin.org/json")
+            xhr.send(123);
+        }
+    </script>
+    <script>
+        function sendFetch() {
+            const data = { username: "example" };
+
+            fetch("https://www.httpbin.org/post", {
+                method: "POST", // or 'PUT'
+                headers: {
+                    "Content-Type": "application/json",
+                    "cheader":"cvalue01"
+                },
+                body: JSON.stringify(data),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log("Success:", data);
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+
+        setTimeout(function () {
+            try {
+                var i = 1
+                while (window['test_tingyun' + i]) {
+                    console.log(window['test_tingyun' + i], '听云日志' + i)
+                    i++
+                }
+            } catch (e) { }
+>>>>>>> 5e542a1 (WebStudy)
         }, 5000)
     </script>
 </head>
 
 <body>
+<<<<<<< HEAD
 -
     <button onclick="triggerJsError();">js-error</button>
 -
+=======
+    <button onclick="sendFetch()">sendFetch</button>
+    -
+    <button onclick="sendAjax()">sendAjax</button>
+    -
+    <button onclick="triggerJsError();">js-error</button>
+    -
+>>>>>>> 5e542a1 (WebStudy)
     <h1 id="top">圣诞节的那些事儿</h1>
     1.圣诞是怎样由来的<br />
     2.<a href="#from">圣诞老人的由来</a><br />
@@ -57,7 +114,12 @@
     <script>
         function triggerJsError() {
             // throw new Error('test-error');
+<<<<<<< HEAD
             console.log(window.a.b.c)
+=======
+            // console.log('a',abc.name.333);
+            list.b.b;
+>>>>>>> 5e542a1 (WebStudy)
         }
         // var y = 0;
         // var z = x/y;
