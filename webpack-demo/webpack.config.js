@@ -16,11 +16,11 @@ module.exports = {
       // 指定打包生成的文件目录, 根据实际情况填写, 例如: './dist'
       include: './dist',
       // 设置上传sourcemap的版本号, 如果不设置, 插件会自动生成, 例如; V1.0.0
-      release: 'V3.0.0',
+      release: '1.0.0',
       // 指定上传的配置信息。如果当前项目目录存在tingyun-cli配置文件.tingyunclirc 或 .tingyunclirc.toml可以不写
       beacon: "http://10.128.2.95:8080",
-      appToken: "745e2dc4adb342ab8db7c8f8916d0c3d",
-      token: "4c1b372361befe35b6580060c6fb6c53861fde6c558ef92d424225cfc14b2820378fafaec714fd61328728c71f5a5cb9ee1ff69ac16627cc41f0cb35755edcb6",
+      appToken: "ec319e17577d4159a40292158522ff01",
+      token: "309bc5d78716468c0f749a85801e9c0c0376fb3c84014bbd6ae6a07c8e6f7005cd7007e86326c359125db567125599f814ab3c4c9d943c7e86113cf51f942657",
       productType: "web" //web或mp
     }),
     // ...

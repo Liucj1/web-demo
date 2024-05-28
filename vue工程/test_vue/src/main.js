@@ -10,25 +10,13 @@ import TingyunPluginRecord from "@tingyun-sdk/web-plugin-record";
 
 Tingyun.init(
   {
-	"domain":"xxhapp.js.cmcc:30002",
-	"token":"e00f62e9f1f3417bb8bb92acebca906c",
-	"key":"GR0v1mrfPQI",
-	"id":"4Nl_NnGbjwY",
+	"domain":"wkbrs2.tingyun.com",
+	"token":"a9267ad585d141819946abbb24336c83",
+	"key":"etv0JWerlzk",
+	"id":"S7Z4tf6rupc",
 	"plugins":[
 		TingyunPluginRecord()
 	],
-	"common":{
-		"paramCollection":[
-			{
-				"key":"version",
-				"type":1
-			},
-			{
-				"key":"sourceapi_web",
-				"type":1
-			}
-		]
-	},
 	"page":{
 		"drThreshold":600,
 		"fpThreshold":400,

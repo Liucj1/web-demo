@@ -1,0 +1,66 @@
+<!--
+子节点：
+    1.parentNode.childNodes（标准）返回包含指定节点的子节点的集合，该集合为即时更新的集合
+    2.parentNode.children（非标准）是一个只读属性，返回所有的子元素节点。它只返回子元素节点，其余节点不返回（重点掌握）
+    虽然children是一个非标准，但是得到了各个浏览器的支持，因此我们可以放心使用
+    3.parentNode.firstChild
+        firstChild返回第一个子节点，找不到则返回null。同样也是包含所有的节点
+    4.parentNode.lastChild
+        lastChild返回最后一个子节点，找不到则返回null。同样也是包含所有的节点
+    5.parentNode.firstElementChild（兼容问题，ie9以上才支持）
+        firstElementChild返回第一个子元素节点，找不到则返回null
+    6.parentNode.lastElementChild（兼容问题，ie9以上才支持）
+        lastElementChild返回最后一个子元素节点，找不到则返回null
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点</title>
+</head>
+<body>
+    <div>我的div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <ol>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ol>
+    <script>
+        var ul = document.querySelector('ul');
+        var lis = ul.querySelectorAll('li');
+        //子节点，childNodes所有的子节点包含元素节点、文本节点等等
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        //如果只想要获取里面的元素节点，则需要专门处理。所以我们一般不提倡使用childNodes
+        var ul = document.querySelector('ul');
+        for(var i = 0; i < ul.childNodes.length; i++){
+            if(ul.childNodes[i].nodeType == 1 ){
+                //ul.childNodes[i]是元素节点
+                console.log(ul.childNodes[i]);
+            }
+        }
+        //children获取所有的子元素节点
+        console.log(ul.children);
+    </script>
+    <script>
+        var ol = document.querySelector('ol');
+        //1.firstChild第一个子节点，不管是文本节点还是元素节点
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+        //3.实际开发的写法，既没有兼容性问题，又返回第一个子元素
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.children.length - 1]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+1、node.nextSibling
+nextSibling返回当前元素的下一个兄弟节点，找不到则返回null。同样，也是包含所有的节点
+
+2、node.previousSibling
+previousSibling返回当前元素上一个兄弟节点，找不到则返回null。同样，也是包含所有的节点
+
+3、node.nextElementSibling
+nextElementSibling返回当前元素下一个兄弟元素节点，找不到则返回null；有兼容性问题，ie9以上支持
+
+4、node.previousElementSibling
+previousElementSibling返回当前元素上一个兄弟节点，找不到则返回null；有兼容性问题，ie9以上支持
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作之兄弟节点</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div = document.querySelector('div');
+        //nextSibling下一个兄弟节点，包含元素节点或者文本节点等
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+        //nextElementSibling得到下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        console.log(div.previousElementSibling);
+    </script>
+</body>
+</html>

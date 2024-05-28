@@ -6,5 +6,6 @@
     "scm.repositories.sortOrder": "discovery time",
     "scm.defaultViewSortKey": "path",
     "problems.sortOrder": "severity",
-    "git.branchSortOrder": "committerdate"
+    "git.branchSortOrder": "committerdate",
+    "liveServer.settings.port": 5501
 }
