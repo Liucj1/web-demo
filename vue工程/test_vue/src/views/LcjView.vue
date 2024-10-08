@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Lcj App"/>
+  <div class="lcj">
+    <h1>This is an lcj page</h1>
   </div>
 </template>
 

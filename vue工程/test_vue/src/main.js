@@ -3,10 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-
 // 在项目最开始的地方引入下面的代码
 import Tingyun from "@tingyun-sdk/web";
 import TingyunPluginRecord from "@tingyun-sdk/web-plugin-record";
+
 
 Tingyun.init(
   {
@@ -17,11 +17,36 @@ Tingyun.init(
 	"plugins":[
 		TingyunPluginRecord()
 	],
+	"common":{
+		"paramCollection":[
+			{
+				"key":"Accept-Languag",
+				"type":2
+			}
+		]
+	},
 	"page":{
-		"drThreshold":600,
-		"fpThreshold":400,
-		"fsThreshold":900,
-		"leThreshold":2000
+		"leThreshold":7201
+	},
+	"ajax":{
+		"recordAll":{
+			"reqBody":true,
+			"reqHeaders":true,
+			"resBody":true,
+			"resHeaders":true,
+			"urlParams":true
+		}
+	},
+	"operation":{
+		"rageClickEnabled":false
+	},
+	"requestTracing":{
+		"corsDomains":[
+			"www.httpbin.org"
+		],
+		"propagators":[
+			"tingyun"
+		]
 	},
 	"replay":{
 		"enabled":true,

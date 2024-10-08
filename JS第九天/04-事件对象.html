@@ -1,0 +1,66 @@
+<!--
+事件对象属性方法                说明
+e.target                     返回触发事件的对象（标准）
+e.srcElement                 返回触发事件的对象（非标准，ie6、7、8使用）
+e.type                       返回事件的类型，比如click、mouseover，不带on
+e.cancelBubble               该属性阻止冒泡（非标准，ie6、7、8使用）
+e.returnValue                该属性阻止默认事件（默认行为；非标准ie6、7、8使用。比如不让链接跳转）
+e.preventDefault()           该方法阻止默认事件（默认行为；标准。比如不让链接跳转）
+e.stopPropagation()          阻止冒泡（标准）
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件对象</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .one {
+            background-color: blue;
+        }
+        .two {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">123</div>
+    <div class="two">234</div>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+        //事件对象
+        var div = document.querySelector('div.one');
+        div.onclick = function(e){
+            //e.target绑定的是触发事件的对象，this返回的是绑定事件的对象
+            console.log(e.target);
+            //console.log(this);
+        }
+        var div1 = document.querySelector('div.two');
+        div1.addEventListener('click',function(event1){
+            console.log(event1);
+            console.log(event1.type);
+        })
+        div1.addEventListener('mouseover',function(event2){
+            console.log(event2.type);
+        });
+        //event就是一个事件对象，写到我们监听函数的小括号里。当形参来看
+        //事件对象只有有了事件才会存在，它是系统给我们自动创建的，不需要我们传递参数
+        //事件对象是我们事件的一系列相关数据的集合，跟事件相关的
+        //事件对象也有兼容性问题，ie6、7、8通过window.event
+
+        //让链接不跳转，或者让提交按钮不提交。阻止默认行为
+        var input = document.querySelector('input');
+        input.addEventListener('click',function(event3){
+            event3.preventDefault();
+        });
+    </script>
+</body>
+</html>
